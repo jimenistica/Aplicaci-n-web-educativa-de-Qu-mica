@@ -1,0 +1,10 @@
+{
+  "description": "This educational web app offers university-level chemistry resources, featuring interactive quizzes, categorized topics, and responsive design for enhanced learning.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

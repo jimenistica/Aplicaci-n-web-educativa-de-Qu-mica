@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlayfairDisplay_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlayfairDisplay-Italic_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://static.figma.com/font/JetBrainsMono_wght__1') format('woff2');
+}
+
+:root {
+  --background: #f0f4f8;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --primary: #1e3a8a;
+  --primary-foreground: #ffffff;
+  --secondary: #e2e8f0;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --border: #e2e8f0;
+  --ring: #1e3a8a;
+  --radius: 10px;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --card: #1e293b;
+  --card-foreground: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #94a3b8;
+  --muted: #162032;
+  --muted-foreground: #94a3b8;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --border: #334155;
+  --ring: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  border-color: var(--border);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+
+/* KaTeX overrides for theme */
+.katex { font-size: 1.05em; }
+.dark .katex { color: var(--foreground); }
