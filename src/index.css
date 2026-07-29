@@ -117,3 +117,114 @@ body {
 /* KaTeX overrides for theme */
 .katex { font-size: 1.05em; }
 .dark .katex { color: var(--foreground); }
+
+/* Estilos para callouts */
+.callout {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.callout h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.callout p {
+  margin: 0.5rem 0;
+}
+
+.callout ul, .callout ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.callout li {
+  margin: 0.25rem 0;
+}
+
+.callout-definition {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.callout-tip {
+  background-color: #f0fdf4;
+  border-color: #10b981;
+}
+
+.callout-warning {
+  background-color: #fef3c7;
+  border-color: #f59e0b;
+}
+
+/* Estilos para la tabla RPECV */
+.rpecv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.rpecv-table th,
+.rpecv-table td {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  text-align: left;
+}
+
+.rpecv-table thead {
+  background-color: #f3f4f6;
+}
+
+.rpecv-table th {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.rpecv-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.rpecv-table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Modo oscuro */
+.dark .callout-definition {
+  background-color: #1e3a8a20;
+  border-color: #60a5fa;
+}
+
+.dark .callout-tip {
+  background-color: #10b98120;
+  border-color: #34d399;
+}
+
+.dark .callout-warning {
+  background-color: #f59e0b20;
+  border-color: #fbbf24;
+}
+
+.dark .rpecv-table thead {
+  background-color: #374151;
+}
+
+.dark .rpecv-table th {
+  color: #f9fafb;
+}
+
+.dark .rpecv-table tbody tr:nth-child(even) {
+  background-color: #1f293750;
+}
+
+.dark .rpecv-table tbody tr:hover {
+  background-color: #374151;
+}
+
+.dark .rpecv-table th,
+.dark .rpecv-table td {
+  border-color: #4b5563;
+}

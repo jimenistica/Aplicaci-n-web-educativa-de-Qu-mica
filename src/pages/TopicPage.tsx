@@ -6,6 +6,7 @@ import { BlockFormula } from '../components/ChemFormula';
 import Callout from '../components/Callout';
 import QuizComponent from '../components/QuizComponent';
 import type { ContentBlock, Section } from '../types';
+import Table from '../components/Table';
 
 const difficultyBadge: Record<string, string> = {
   'Básico': 'text-accent bg-accent/10',
@@ -48,6 +49,15 @@ function RenderBlock({ block }: { block: ContentBlock }) {
           ))}
         </div>
       </div>
+    );
+  }
+    if (block.type === 'table') {
+    return (
+      <Table 
+        headers={block.headers || []} 
+        rows={block.rows || []} 
+        caption={block.caption} 
+      />
     );
   }
 

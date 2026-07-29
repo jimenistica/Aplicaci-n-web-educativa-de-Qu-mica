@@ -10,13 +10,16 @@ export interface QuizQuestion {
 }
 
 export interface ContentBlock {
-  type: 'text' | 'block-formula' | 'inline-formula' | 'callout' | 'example' | 'heading';
+  type: 'text' | 'block-formula' | 'inline-formula' | 'callout' | 'example' | 'heading'| 'table';
   content?: string;
   formula?: string;
   variant?: 'info' | 'tip' | 'warning' | 'definition';
   title?: string;
   steps?: { label: string; content?: string; formula?: string }[];
   level?: 2 | 3;
+  headers?: string[];
+  rows?: string[][];
+  caption?: string;
 }
 
 export interface Section {

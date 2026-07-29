@@ -28,7 +28,7 @@ export const topics: Topic[] = [
           },
           {
             type: 'block-formula',
-            formula: 'N_A = 6.02214076 \\times 10^{23} \\; \\text{mol}^{-1}',
+            formula: 'N_A = 6.02214076 \\times 10^{23}\\; \\text{mol}^{-1}',
           },
           {
             type: 'text',
@@ -184,7 +184,7 @@ export const topics: Topic[] = [
       },
     ],
   },
-  {
+  /*{
     id: 'enlace-covalente',
     title: 'Enlace Covalente',
     subtitle: 'Estructura de Lewis, geometría molecular y polaridad del enlace',
@@ -332,6 +332,228 @@ export const topics: Topic[] = [
         correctIndex: 1,
         explanation:
           'En CO₂ los dos enlaces C=O son polares pero apuntan en direcciones opuestas (molécula lineal). Los vectores dipolo se cancelan, resultando en un momento dipolar total nulo.',
+      },
+    ],
+  },*/
+    {
+    id: 'enlace-quimico-geometria',
+    title: 'Enlace Químico y Geometría Molecular',
+    subtitle: 'De Lewis a la forma 3D: RPECV, polaridad y propiedades de las moléculas',
+    category: 'Química General',
+    difficulty: 'Intermedio',
+    progress: 0,
+    readTime: 30,
+    sections: [
+      {
+        id: 'que-es-un-enlace',
+        title: '1. ¿Qué es un enlace químico?',
+        blocks: [
+          {
+            type: 'text',
+            content: 'Los átomos rara vez existen de forma aislada en la naturaleza. Tienden a unirse entre sí para formar moléculas o redes cristalinas más estables. Un enlace químico es la fuerza que mantiene unidos a dos o más átomos, y se produce porque el sistema resultante tiene menor energía que los átomos separados.',
+          },
+          {
+            type: 'callout',
+            variant: 'definition',
+            title: 'Principio fundamental',
+            content: 'Los átomos se enlazan porque al hacerlo liberan energía y alcanzan un estado de menor energía (más estable). La energía que se libera al formarse el enlace se llama energía de enlace, y es la misma energía que habría que aportar para romperlo.',
+          },
+        ],
+      },
+      {
+        id: 'clasificacion-general',
+        title: '2. Clasificación de los enlaces: el rol de la electronegatividad',
+        blocks: [
+          {
+            type: 'text',
+            content: 'La electronegatividad (χ) es la capacidad de un átomo para atraer electrones compartidos en un enlace. La diferencia de electronegatividad (Δχ) entre dos átomos determina el tipo de enlace que se forma.',
+          },
+          {
+            type: 'callout',
+            variant: 'tip',
+            title: 'Los tres grandes tipos de enlace',
+            content: '• Iónico (Δχ > 1.7): transferencia completa de electrones. Ej: NaCl.\n• Covalente (Δχ ≤ 1.7): compartición de electrones. Ej: H₂O, CO₂.\n• Metálico: electrones deslocalizados en una "nube" compartida. Ej: Fe, Cu.',
+          },
+          {
+            type: 'text',
+            content: 'En este tema nos enfocaremos en el enlace covalente, que es el más diverso y el que da lugar a la inmensa mayoría de las moléculas que conocemos.',
+          },
+        ],
+      },
+      {
+        id: 'estructuras-lewis',
+        title: '3. Estructuras de Lewis',
+        blocks: [
+          {
+            type: 'text',
+            content: 'Las estructuras de Lewis son una representación simplificada de los electrones de valencia en una molécula. Siguen la regla del octeto (o del dueto para el hidrógeno): los átomos tienden a compartir, ganar o perder electrones hasta tener 8 electrones en su capa de valencia.',
+          },
+          {
+            type: 'callout',
+            variant: 'tip',
+            title: 'Pasos para dibujar una estructura de Lewis',
+            content: '1. Contar el total de electrones de valencia.\n2. Identificar el átomo central (generalmente el menos electronegativo, excepto H).\n3. Conectar los átomos con enlaces simples.\n4. Distribuir los electrones restantes como pares libres para completar octetos.\n5. Si falta, formar dobles o triples enlaces.',
+          },
+        ],
+      },
+      {
+        id: 'carga-formal',
+        title: '4. Carga Formal: eligiendo la mejor estructura',
+        blocks: [
+          {
+            type: 'text',
+            content: 'Cuando existen varias estructuras de Lewis posibles (estructuras resonantes), necesitamos un criterio para decidir cuál es la más estable. Ese criterio es la Carga Formal (CF).',
+          },
+          {
+            type: 'block-formula',
+            formula: 'CF = (\\text{e}^- \\text{ de valencia}) - (\\text{e}^- \\text{ no enlazantes}) - \\frac{1}{2}(\\text{e}^- \\text{ enlazantes})',
+          },
+          {
+            type: 'callout',
+            variant: 'definition',
+            title: 'Criterios de estabilidad',
+            content: '• Las estructuras con CF más cercanas a cero son más estables.\n• Si hay cargas, las negativas deben estar en los átomos más electronegativos.\n• Evitar cargas del mismo signo en átomos adyacentes.',
+          },
+        ],
+      },
+      {
+        id: 'polaridad',
+        title: '5. Polaridad: del enlace a la molécula',
+        blocks: [
+          {
+            type: 'text',
+            content: 'Cuando dos átomos con diferente electronegatividad comparten electrones, el par electrónico se desplaza hacia el átomo más electronegativo, creando un dipolo (momento dipolar, μ).',
+          },
+          {
+            type: 'callout',
+            variant: 'warning',
+            title: '¡Error conceptual muy común!',
+            content: 'Tener enlaces polares NO garantiza que la molécula sea polar. La polaridad molecular depende de la geometría: si los dipolos se cancelan vectorialmente por simetría, la molécula es APOLAR.\n\nEjemplo clave: El CO₂ tiene enlaces C=O polares, pero por su geometría lineal los dipolos se cancelan → molécula apolar. El H₂O tiene enlaces O-H polares y geometría angular → los dipolos NO se cancelan → molécula polar.',
+          },
+        ],
+      },
+      {
+  id: 'geometria-rpecv',
+  title: '6. Geometría Molecular: Teoría RPECV',
+  blocks: [
+    {
+      type: 'text',
+      content: 'La Teoría de Repulsión de Pares de Electrones de la Capa de Valencia (RPECV o VSEPR) predice la forma tridimensional de las moléculas. Se basa en un principio simple: los pares de electrones (enlazantes y no enlazantes) se repelen y se ubican lo más lejos posible entre sí.',
+    },
+    {
+      type: 'callout',
+      variant: 'definition',
+      title: 'Notación AXE',
+      content: '• A = átomo central\n• X = pares enlazantes (átomos unidos a A)\n• E = pares solitarios (no enlazantes) sobre A\n\nLa geometría electrónica considera todos los dominios (X+E). La geometría molecular solo describe la posición de los átomos (X).',
+    },
+    {
+      type: 'text',
+      content: 'A continuación, la tabla completa de geometrías según el número de dominios electrónicos:',
+    },
+    {
+      type: 'table',
+      caption: 'Geometrías moleculares según la teoría RPECV',
+      headers: ['Dominios', 'Notación AXE', 'Pares Solitarios', 'Geometría Molecular', 'Ángulos'],
+      rows: [
+        ['2', 'AX₂', '0', 'Lineal', '180°'],
+        ['3', 'AX₃', '0', 'Trigonal plana', '120°'],
+        ['3', 'AX₂E', '1', 'Angular', '< 120°'],
+        ['4', 'AX₄', '0', 'Tetraédrica', '109.5°'],
+        ['4', 'AX₃E', '1', 'Piramidal trigonal', '< 109.5°'],
+        ['4', 'AX₂E₂', '2', 'Angular', '< 109.5° (≈104.5° en H₂O)'],
+        ['5', 'AX₅', '0', 'Bipiramidal trigonal', '90° y 120°'],
+        ['5', 'AX₄E', '1', 'Balancín (seesaw)', 'Variables'],
+        ['5', 'AX₃E₂', '2', 'Forma de T', '≈90°'],
+        ['5', 'AX₂E₃', '3', 'Lineal', '180°'],
+        ['6', 'AX₆', '0', 'Octaédrica', '90°'],
+        ['6', 'AX₅E', '1', 'Piramidal cuadrada', '< 90°'],
+        ['6', 'AX₄E₂', '2', 'Planar cuadrada', '90°'],
+      ],
+    },
+    {
+      type: 'callout',
+      variant: 'tip',
+      title: 'Regla práctica para recordar',
+      content: '• Cada par solitario "comprime" los ángulos de enlace (por eso el H₂O tiene 104.5° en vez de 109.5°).\n• Los pares solitarios ejercen mayor repulsión que los enlazantes (LP-LP > LP-BP > BP-BP).\n• En geometrías de 5 dominios, los pares solitarios prefieren posiciones ecuatoriales (menos repulsión).',
+    },
+  ],
+},
+      {
+        id: 'ejemplo-resuelto',
+        title: '7. Ejemplo resuelto paso a paso: El amoníaco (NH₃)',
+        blocks: [
+          {
+            type: 'example',
+            title: 'Ejemplo: Geometría y polaridad del NH₃',
+            steps: [
+              {
+                label: 'Paso 1: Contar electrones de valencia',
+                content: 'N (grupo 15) → 5 e⁻ + 3 × H (1 e⁻) = 8 e⁻ totales',
+              },
+              {
+                label: 'Paso 2: Dibujar esqueleto',
+                content: 'N en el centro, unido a 3 H con enlaces simples (6 e⁻ usados). Quedan 2 e⁻ → un par solitario en el N.',
+              },
+              {
+                label: 'Paso 3: Determinar dominios',
+                content: 'N tiene 4 dominios: 3 pares enlazantes (X=3) + 1 par solitario (E=1) → Notación AX₃E',
+              },
+              {
+                label: 'Paso 4: Geometría electrónica vs molecular',
+                content: 'Geometría electrónica (4 dominios) → Tetraédrica.\nGeometría molecular (solo átomos) → Piramidal trigonal.',
+              },
+              {
+                label: 'Paso 5: Polaridad',
+                content: 'Enlaces N-H ligeramente polares. Geometría asimétrica (el par solitario rompe la simetría) → los dipolos NO se cancelan → molécula polar.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    quiz: [
+      {
+        id: 'q1',
+        question: '¿Cuál es la geometría molecular del metano (CH₄)?',
+        options: ['Lineal', 'Trigonal plana', 'Tetraédrica', 'Piramidal'],
+        correctIndex: 2,
+        explanation: 'El carbono central tiene 4 pares enlazantes y 0 pares solitarios (AX₄), lo que genera una geometría tetraédrica con ángulos de 109.5°.',
+      },
+      {
+        id: 'q2',
+        question: '¿Por qué el CO₂ es una molécula apolar a pesar de tener enlaces polares?',
+        options: [
+          'Porque el carbono no es electronegativo',
+          'Porque su geometría lineal hace que los dipolos se cancelen',
+          'Porque tiene dobles enlaces',
+          'Porque es un gas a temperatura ambiente',
+        ],
+        correctIndex: 1,
+        explanation: 'La simetría lineal (180°) del CO₂ provoca que los momentos dipolares de los dos enlaces C=O sean iguales y opuestos, cancelándose vectorialmente.',
+      },
+      {
+        id: 'q3',
+        question: 'En la teoría RPECV, ¿qué tipo de repulsión es MAYOR?',
+        options: [
+          'Par enlazante - Par enlazante',
+          'Par solitario - Par enlazante',
+          'Par solitario - Par solitario',
+          'Todas repelen por igual',
+        ],
+        correctIndex: 2,
+        explanation: 'Los pares solitarios están más cerca del núcleo del átomo central y ocupan más espacio, ejerciendo la mayor repulsión (LP-LP > LP-BP > BP-BP).',
+      },
+      {
+        id: 'q4',
+        question: '¿Cuál es la geometría molecular del SF₄ (4 dominios enlazantes + 1 par solitario)?',
+        options: [
+          'Tetraédrica',
+          'Bipiramidal trigonal',
+          'Balancín (seesaw)',
+          'Planar cuadrada',
+        ],
+        correctIndex: 2,
+        explanation: 'SF₄ tiene 5 dominios totales (AX₄E), lo que da geometría electrónica bipiramidal trigonal, pero geometría molecular de balancín (seesaw) debido al par solitario.',
       },
     ],
   },
